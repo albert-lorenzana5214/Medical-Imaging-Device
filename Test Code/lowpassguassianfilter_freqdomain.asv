@@ -1,0 +1,19 @@
+clc; clear all; close all;
+
+a = imread('original.jpg');
+a = rgb2gray(a);
+[m,n] = size(a)
+g = fspecial('gaussian', [m],10);
+max(g(:))
+size(g)
+g1=mat2gray(g);
+max(g1(:))
+size(g1)
+
+af=fftshift(fft2(a));
+ag1=a.*uint8(g1);
+fftshow(ag1)
+ag1=af.*uint8(gl)
+fftshow(ag1)
+agli=ifft2(ag1);
+ifftshow(agli)

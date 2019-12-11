@@ -1,0 +1,16 @@
+clear; clc;
+a = imread('original.jpg');
+a2 = rgb2gray(a);
+e1 = edge(a2,'prewitt');
+e2 = edge(a2,'canny');
+e3 = edge(a2,'sobel');
+e4= edge(a2,'roberts');
+imshow(a2);
+subplot(2,2,1),imshow(e1)
+subplot(2,2,2), imshow(e2)
+subplot(2,2,3), imshow(e3)
+subplot(2,2,4), imshow(e4)
+
+%%
+ic = a2
+px=[-

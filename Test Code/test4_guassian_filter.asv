@@ -1,0 +1,15 @@
+clc; clear all; close all;
+a = imread('original.jpg');
+a = rgb2gray(a);
+an = imnoise(a,'gaussian',0.01);
+
+
+figure,imshow(a);
+figure,imshow(an);
+
+sigma=3;
+cutoff=ceil(3*sigma);
+h = fpecial('guassian', 2*cutoff+1,sigma);
+out= conv2(a,h,'same');
+
+fi

@@ -4,7 +4,7 @@ clear all
 %Remove figures
 close all
 %read image
-img=imread('C:/Users/AF/Documents/Nexus/Venture/Script/test.jpg');
+%img=imread('C:/Users/AF/Documents/Nexus/Venture/Script/test.jpg');
 %display image
 figure,imshow(img);
 %convert image to grayscale
